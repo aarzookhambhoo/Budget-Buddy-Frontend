@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+// import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <div className="App">
-      <h1> Budget Buddy</h1>
-      <p>Track your spending and manage your money smartly!</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
